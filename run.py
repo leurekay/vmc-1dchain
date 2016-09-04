@@ -12,7 +12,7 @@ import random
 from hamiltonian import *
 from configuration import conf_initial
 from slater import Ratio
-L=30
+L=10
 sample_goal=L*5000
 
 N_up=1
@@ -63,10 +63,9 @@ while True:
         
         samples=samples+1
         conf,ratio=try_hop
-        if samples%5==0:
-            E_total=E_total-ratio-1/ratio
+        E_total=E_total-ratio-1/ratio
     if samples==sample_goal:
         break
-E=E_total/(sample_goal/5)
+E=E_total/sample_goal
 #E_site=E_total/sample_goal/L**2    
     
