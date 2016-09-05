@@ -34,7 +34,9 @@ def H(L):
     return h,dia,u
 
 if __name__=='__main__':
-    L=8
+    L=3
     h,dia,u=H(L)     
     E_total=0
-    
+    for i in range(L):
+        E_total=E_total+dia[i]
+    E_site=E_total/L
