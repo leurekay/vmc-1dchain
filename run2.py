@@ -1,10 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-Created on Sun Aug 28 19:14:48 2016
-只有Hopping被接受了，才计次
+Created on Sun Sep 25 17:57:25 2016
+即使hopping被拒绝了，也计次
+经验证，不行
 @author: aa
 """
-
 from __future__ import division
 from math import *
 import numpy as np
@@ -14,8 +14,9 @@ from configuration import conf_initial
 from slater import *
 from observable import *
 start_time=time.time()
-L=7
-N_up=6
+
+L=3
+N_up=2
 steps=2000
 sample_goal=L*steps
 
@@ -49,8 +50,8 @@ def hop(conf,L):
             break
 
     ratio=Ratio(conf,select,hop_index,L)[0]
-    rho=ratio*ratio.conjugate()
-    print ratio
+    rho=(ratio*ratio.conjugate()).real
+    print rho
     if random.uniform(0,1)<min(1,rho):
         conf[0][select]=0
         conf[0][hop_index]=1 
@@ -59,25 +60,25 @@ def hop(conf,L):
         return "reject"
 conf=conf_initial(L,N_up)
 samples=0
+
 E_total=0
 while True:
+    samples=samples+1
     try_hop=hop(conf,L)
-    if try_hop !="reject":
-        
-        samples=samples+1
+    if try_hop !="reject":        
         conf,ratio=try_hop
-        E_total=E_total+E_loc1(conf,L)
+        Eloc=E_loc1(conf,L)
     
-        #E_total=E_total+E_loc(conf,L)
+    E_total=E_total+Eloc
     if samples==sample_goal:
         break
 E=E_total/samples
-#E_site=E_total/sample_goal/L**2    
+#E_site=E_total/sample_goal/L**2
 
 run_time=time.time()-start_time 
 print "run time:%d seconds"%run_time 
 
-f = open('C:/Users/aa/Documents/Python Scripts/vmc-1dchain/log1.txt', 'a+')
+f = open('C:/Users/aa/Documents/Python Scripts/vmc-1dchain/log2.txt', 'a+')
 now=time.strftime("%Y-%m-%d %H:%M:%S")
 f.write("E=%.3f  steps=%d  L=%d  N_up=%d  run_time=%.1fs  "%(E,steps,L,N_up,run_time)+"\n\n")
 f.close()
