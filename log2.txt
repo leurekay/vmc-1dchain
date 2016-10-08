@@ -144,3 +144,23 @@ E=-3.000  steps=2000  L=3  N_up=2  run_time=3.2s
 
 E=-25.464  steps=2000  L=20  N_up=10  run_time=587.2s  
 
+E=-38.267  steps=10  L=30  N_up=15  run_time=14.6s  
+
+E=-38.2671 E_site=-1.275570 steps=10  L=30  N_up=15  run_time=14.2s  
+
+E=-38.2671 E_site=-1.275570 steps=100  L=30  N_up=15  run_time=136.2s  
+
+E=-75.4749 E_site=-1.886871 steps=10  L=40  N_up=20  run_time=107.8s  
+
+E=-51.3331 E_site=-1.283327 steps=100  L=40  N_up=20  run_time=518.6s  
+
+E=-50.9150 E_site=-1.272876 steps=1000  L=40  N_up=20  run_time=5301.4s  
+
+E=-22.6038 E_site=-1.130191 steps=2000  L=20  N_up=10  run_time=496.9s  
+
+E=-22.4802 E_site=-1.124009 steps=2000  L=20  N_up=10  run_time=651.8s  
+
+E=-38.4661 E_site=-1.282203 steps=1000  L=30  N_up=15  run_time=1339.8s  
+
+E=-38.2671 E_site=-1.275570 steps=1000  L=30  N_up=15  run_time=1349.0s  
+

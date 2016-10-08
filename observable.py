@@ -13,7 +13,7 @@ from slater import *
 from configuration import conf_initial
 
 
-def E_loc(conf,L):
+def E_loc(conf,L):   #compute the ratio of two determinant directly
     box=[]
     box1=[]
     for i in range(L):
@@ -45,7 +45,7 @@ def E_loc(conf,L):
         box1.append(Det(i,L)/den)
     return -sum(box1)
 
-def E_loc1(conf,L):
+def E_loc1(conf,L):  #using skills to compute the ratio 
     box=[]
     for i in range(L):
         if conf[0][i]==1:

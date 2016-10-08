@@ -92,3 +92,13 @@ E=-5.282  steps=2000  L=7  N_up=5  run_time=23.5s
 
 E=-2.353  steps=2000  L=7  N_up=6  run_time=16.8s  
 
+E=-38.2671  E_site=-1.275570  steps=10  L=30  N_up=15  run_time=19.7s  
+
+E=-52.7307  E_site=-1.318269  steps=10  L=40  N_up=20  run_time=106.2s  
+
+E=-51.1552  E_site=-1.278880  steps=100  L=40  N_up=20  run_time=1099.6s  
+
+E=-51.1158  E_site=-1.277895  steps=1000  L=40  N_up=20  run_time=8099.4s  
+
+E=-22.4755  E_site=-1.123774  steps=1000  L=20  N_up=10  run_time=546.8s  
+

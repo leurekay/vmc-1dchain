@@ -14,9 +14,9 @@ from configuration import conf_initial
 from slater import *
 from observable import *
 start_time=time.time()
-L=7
-N_up=6
-steps=2000
+L=20
+N_up=10
+steps=1000
 sample_goal=L*steps
 
 def hop(conf,L):
@@ -72,12 +72,12 @@ while True:
     if samples==sample_goal:
         break
 E=E_total/samples
-#E_site=E_total/sample_goal/L**2    
+E_site=E/L
 
 run_time=time.time()-start_time 
 print "run time:%d seconds"%run_time 
 
 f = open('C:/Users/aa/Documents/Python Scripts/vmc-1dchain/log1.txt', 'a+')
 now=time.strftime("%Y-%m-%d %H:%M:%S")
-f.write("E=%.3f  steps=%d  L=%d  N_up=%d  run_time=%.1fs  "%(E,steps,L,N_up,run_time)+"\n\n")
+f.write("E=%.4f  E_site=%4f  steps=%d  L=%d  N_up=%d  run_time=%.1fs  "%(E,E_site,steps,L,N_up,run_time)+"\n\n")
 f.close()
