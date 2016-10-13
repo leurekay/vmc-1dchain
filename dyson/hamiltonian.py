@@ -34,7 +34,7 @@ def H(L):
     return h,dia,u
 
 if __name__=='__main__':
-    L=6
+    L=4
     h,dia,u=H(L)     
     E_total=0
     for i in range(L):
