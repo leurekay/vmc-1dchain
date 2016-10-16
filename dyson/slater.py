@@ -77,34 +77,49 @@ def Det(conf,L,u):
     D=M[occupy_index]
     return np.linalg.det(D)
     
-def Ratio3(conf,before,after,L,u):
+def Ratio3(conf,before,after,L,N_up):
+    N_down=L-N_up
     k_range=np.linspace(-pi,pi,L)
-    #k_range=a[2:6]
-    #k_range=np.append(k_range,k_range)
-    slater=np.zeros((L,L),"complex")
+    
+    dispersion=-np.cos(k_range)
+    idx=dispersion.argsort()
+    print idx
+    k_up=idx[0:N_up]
+    k_down=idx[0:N_down]
+    k_up.sort()
+    k_down.sort()
+    print k_up
+    print k_down
+    
     occupy_index=[]
     for i in range(np.size(conf)):
         if i==before:
             beta=len(occupy_index)    #beta :correspoding position in D matrix or the particle index
         if conf[0][i]!=0:
-            occupy_index.append(i)
-    for x in range(L):
-        for k in range(L):
-            slater[k][x]=scipy.exp(1j*k_range[k]*occupy_index[x])
-    det_old=np.linalg.det(slater)
-    for k in range(L):
-        slater[k][beta]=scipy.exp(1j*k_range[k]*after)
-    det_new=np.linalg.det(slater)
-    return det_new/det_old
+            occupy_index.append(i)    
+    print occupy_index
+    slater_up=np.zeros((N_up,N_up),"complex")
+    slater_down=np.zeros((N_down,N_down),"complex")
+    if before<L:
+        for x in range(N_up):
+            for k in range(N_up):
+                slater_up[k][x]=scipy.exp(1j*k_range[k_up[k]]*occupy_index[x])
+        det_old=np.linalg.det(slater_up)
+        for k in range(N_up):
+            slater_up[k][beta]=scipy.exp(1j*k_range[k_up[k]]*after)        
+        det_new=np.linalg.det(slater_up)
+        #print det_new,det_old        
+        return det_new/det_old
 
     
 if __name__=='__main__' :
     L=8
+    N_up=4
     h,dia,u=H(L)
-    conf=conf_initial(L,4)
+    conf=conf_initial(L,N_up)
     
-    conf=np.array([[0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0]])
-    print Ratio(conf,2,1,L,u)
-    print Ratio1(conf,2,1,L,u)
+    #conf=np.array([[0, 0, 1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 0]])
+    print Ratio(conf,3,2,L,u)
+    print Ratio1(conf,3,2,L,u)
     #print Ratio2(conf,15,8,L,u)
-    print Ratio3(conf,2,1,L,u)
+    print Ratio3(conf,3,2,L,N_up)
