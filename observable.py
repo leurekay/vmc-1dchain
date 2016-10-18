@@ -13,7 +13,7 @@ from slater import *
 from configuration import conf_initial
 
 
-def E_loc(conf,L):   #compute the ratio of two determinant directly
+def E_loc1(conf,L):   #compute the ratio of two determinant directly
     box=[]
     box1=[]
     for i in range(L):
@@ -45,7 +45,7 @@ def E_loc(conf,L):   #compute the ratio of two determinant directly
         box1.append(Det(i,L)/den)
     return -sum(box1)
 
-def E_loc1(conf,L):  #using skills to compute the ratio 
+def E_loc(conf,L):  #using skills to compute the ratio 
     box=[]
     for i in range(L):
         if conf[0][i]==1:
@@ -59,8 +59,24 @@ def E_loc1(conf,L):  #using skills to compute the ratio
                 box.append(Ratio(conf,i+L,left(i,L)+L,L)[0])
             if conf[0][right(i,L)+L]==0:
                 box.append(Ratio(conf,i+L,right(i,L)+L,L)[0])
-                
     return -sum(box)
+
+def E_loc4(conf,L,N_up):
+    box=[]
+    for i in range(L):
+        if conf[0][i]==1:
+            if conf[0][left(i,L)]==0:
+                box.append(Ratio4(conf,i,left(i,L),L))
+            if conf[0][right(i,L)]==0:
+                box.append(Ratio4(conf,i,right(i,L),L))
+            
+        if conf[0][i+L]==1:
+            if conf[0][left(i,L)+L]==0:
+                box.append(Ratio(conf,i+L,left(i,L)+L,L)[0])
+            if conf[0][right(i,L)+L]==0:
+                box.append(Ratio(conf,i+L,right(i,L)+L,L)[0])
+    return -sum(box)
+    
 
 
 if __name__=='__main__' : 
