@@ -58,3 +58,103 @@ E=-31.0436 E_site=-1.293482 steps=3000  L=24  N_up=12  run_time=97.1s
 
 E=-30.6390 E_site=-1.276626 steps=3000  L=24  N_up=12  run_time=213.2s  
 
+E=-29.9210 E_site=-1.246707 steps=3000  L=24  N_up=12  run_time=108.8s  
+
+E=-30.3830 E_site=-1.265959 steps=300  L=24  N_up=12  run_time=7.5s  
+
+E=-35.4367 E_site=-1.476530 steps=3000  L=24  N_up=12  run_time=85.9s  
+
+E=-28.1067 E_site=-1.277577 steps=30  L=22  N_up=11  run_time=12.6s  
+
+E=-28.1067 E_site=-1.277577 steps=30  L=22  N_up=11  run_time=1.7s  
+
+E=-28.1067 E_site=-1.277577 steps=30  L=22  N_up=11  run_time=1.7s  
+
+E=-28.1067 E_site=-1.277577 steps=30  L=22  N_up=11  run_time=1.7s  
+
+E=-28.1067 E_site=-1.277577 steps=3  L=22  N_up=11  run_time=1.2s  
+
+E=-28.1067 E_site=-1.277577 steps=3  L=22  N_up=11  run_time=1.3s  
+
+E=-28.1067 E_site=-1.277577 steps=3  L=22  N_up=11  run_time=1.2s  
+
+E=-28.1067 E_site=-1.277577 steps=1  L=22  N_up=11  run_time=1.2s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-17.9758 E_site=-1.283988 steps=1  L=14  N_up=7  run_time=0.5s  
+
+E=-208.8624 E_site=-2.547102 steps=2  L=82  N_up=41  run_time=6.4s  
+
+E=-104.4312 E_site=-1.273551 steps=2  L=82  N_up=41  run_time=42.6s  
+
+E=-104.4312 E_site=-1.273551 steps=1  L=82  N_up=41  run_time=42.4s  
+
+E=-54.2218 E_site=-1.290995 steps=1000  L=42  N_up=21  run_time=109.9s  
+
+E=-53.5260 E_site=-1.274428 steps=1  L=42  N_up=21  run_time=6.5s  
+
+E=-53.5260 E_site=-1.274428 steps=100  L=42  N_up=21  run_time=16.3s  
+
+E=-43.9761 E_site=-1.293414 steps=5000  L=34  N_up=17  run_time=271.3s  
+
+E=-43.3518 E_site=-1.275053 steps=5  L=34  N_up=17  run_time=32.5s  
+
+E=-43.3518 E_site=-1.275053 steps=5  L=34  N_up=17  run_time=32.5s  
+
+E=-58.0914 E_site=-1.708571 steps=50  L=34  N_up=17  run_time=35.6s  
+
+E=-43.3518 E_site=-1.275053 steps=20  L=34  N_up=17  run_time=33.2s  
+
+E=-43.3518 E_site=-1.275053 steps=40  L=34  N_up=17  run_time=34.1s  
+
+E=-43.3518 E_site=-1.275053 steps=100  L=34  N_up=17  run_time=37.0s  
+
+E=-33.6543 E_site=-1.869681 steps=1000  L=18  N_up=9  run_time=22.1s  
+
+E=-23.0351 E_site=-1.279727 steps=100  L=18  N_up=9  run_time=1.7s  
+
+E=-23.0351 E_site=-1.279727 steps=100  L=18  N_up=9  run_time=1.7s  
+
+E=-23.0351 E_site=-1.279727 steps=500  L=18  N_up=9  run_time=5.7s  
+
+E=-23.0351 E_site=-1.279727 steps=1000  L=18  N_up=9  run_time=10.4s  
+
+E=-23.0351 E_site=-1.279727 steps=2000  L=18  N_up=9  run_time=20.1s  
+
+E=-18.7151 E_site=-1.336792 steps=8000  L=14  N_up=7  run_time=49.7s  
+
+E=-17.9758 E_site=-1.283988 steps=8000  L=14  N_up=7  run_time=47.7s  
+
+E=-17.9758 E_site=-1.283988 steps=8000  L=14  N_up=7  run_time=48.2s  
+
+E=-23.0351 E_site=-1.279727 steps=2000  L=18  N_up=9  run_time=20.6s  
+
+E=-23.0351 E_site=-1.279727 steps=2000  L=18  N_up=9  run_time=20.7s  
+
+E=-43.3518 E_site=-1.275053 steps=500  L=34  N_up=17  run_time=27.0s  
+
+E=-28.1067 E_site=-1.277577 steps=5000  L=22  N_up=11  run_time=81.5s  
+
+E=-19.5685 E_site=-1.397750 steps=5000  L=14  N_up=7  run_time=33.7s  
+
+E=-17.9758 E_site=-1.283988 steps=5000  L=14  N_up=7  run_time=29.8s  
+
+E=-17.9758 E_site=-1.283988 steps=5000  L=14  N_up=7  run_time=29.6s  
+
+E=-12.9443 E_site=-1.294427 steps=5000  L=10  N_up=5  run_time=16.1s  
+
