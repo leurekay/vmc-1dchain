@@ -65,11 +65,11 @@ def E_loc4(conf,L,u,N_up):
 
 
 if __name__=='__main__' : 
-    L=42
-    N_up=21
+    L=40
+    N_up=20
     h,dia,u=H(L)
 
     conf=conf_initial(L,N_up)
-    bb=E_loc(conf,L,u)
-    bb1=E_loc1(conf,L,u)
+    b0=E_loc(conf,L,u)
+    b1=E_loc1(conf,L,u)
     b4=E_loc4(conf,L,u,N_up)

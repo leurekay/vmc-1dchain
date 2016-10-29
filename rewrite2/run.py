@@ -21,9 +21,9 @@ from slater import *
 from observable import *
 start_time=time.time()
 
-L=10
-N_up=5
-steps=5000
+L=42
+N_up=21
+steps=2000
 sample_goal=L*steps
 NheatBath=100
 def hop(conf,L,u,N_up):
