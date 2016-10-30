@@ -8,9 +8,9 @@ import numpy as np
 from math import *
 import matplotlib  
 import matplotlib.pyplot as plt 
-L=200
+L=1000
 N=L**2
-fill=1.2
+fill=0.5
 kx_range=np.arange(-pi,pi,2*pi/L)
 ky_range=np.arange(-pi,pi,2*pi/L)
 
@@ -24,11 +24,23 @@ for kx in kx_range:
         i=i+1
 E_arr=Ekxky[0,:]
 inx=E_arr.argsort()
-aa=Ekxky[:,inx]
-
+Ekxky=Ekxky[:,inx]
+E_fermi=Ekxky[0][N*fill/2]
+print E_fermi
 #f1 = plt.figure(1)  
 #plt.subplot(211) 
 plt.figure(figsize=(8,8))
 plt.xlim(xmax=pi,xmin=-pi)
 plt.ylim(ymax=pi,ymin=-pi)
-plt.scatter(aa[1,0:N*fill/2],aa[2,0:N*fill/2])  
+plt.scatter(Ekxky[1,0:N*fill/2],Ekxky[2,0:N*fill/2])
+
+plt.savefig("/home/gates/hp/vmc-1dchain/feimi/fill_"+str(fill)+".jpg")
+
+plt.figure(figsize=(8,8))
+plt.xlim(xmax=5,xmin=-5)
+plt.ylim(ymax=0.8,ymin=0)
+plt.hist(E_arr,1000,normed=1)
+plt.savefig("/home/gates/hp/vmc-1dchain/feimi/den"+str(fill)+".jpg")
+
+
+
